@@ -1,0 +1,423 @@
+{
+///-----------------------------------------------------------------------------
+/// Place your global snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and
+/// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope
+/// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is
+/// used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+/// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders.
+/// Placeholders with the same ids are connected.
+/// Example:
+/// "Print to console": {
+/// 	"scope": "javascript,typescript",
+/// 	"prefix": "log",
+/// 	"body": [
+/// 		"console.log('$1');",
+/// 		"$2"
+/// 	],
+/// 	"description": "Log output to console"
+/// }
+///-----------------------------------------------------------------------------
+
+///%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+/// /*-languages
+///%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+///%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+/// comment dividers
+///%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+"comment divider (/*) : d4 + star" : {
+	"scope"  : "css,javascript,javascriptreact,jsonc,less,sass,scss,stylus,typescript,typescriptreact,tsonc",
+	"prefix" : "--/*d4*",
+	"body"   : "/******************/",
+},
+"comment divider (/*) : d3 + star" : {
+	"scope"  : "css,javascript,javascriptreact,jsonc,less,sass,scss,stylus,typescript,typescriptreact,tsonc",
+	"prefix" : "--/*d3*",
+	"body"   : "/**************************************/",
+},
+"comment divider (/*) : d2 + star" : {
+	"scope"  : "css,javascript,javascriptreact,jsonc,less,sass,scss,stylus,typescript,typescriptreact,tsonc",
+	"prefix" : "--/*d2*",
+	"body"   : "/**********************************************************/",
+},
+"comment divider (/*) : d1 + star" : {
+	"scope"  : "css,javascript,javascriptreact,jsonc,less,sass,scss,stylus,typescript,typescriptreact,tsonc",
+	"prefix" : "--/*d1*",
+	"body"   : "/******************************************************************************/",
+},
+"comment divider (/*) : d4 + single" : {
+	"scope"  : "css,javascript,javascriptreact,jsonc,less,sass,scss,stylus,typescript,typescriptreact,tsonc",
+	"prefix" : "--/*d4-",
+	"body"   : "/*----------------*/",
+},
+"comment divider (/*) : d3 + single" : {
+	"scope"  : "css,javascript,javascriptreact,jsonc,less,sass,scss,stylus,typescript,typescriptreact,tsonc",
+	"prefix" : "--/*d3-",
+	"body"   : "/*------------------------------------*/",
+},
+"comment divider (/*) : d2 + single" : {
+	"scope"  : "css,javascript,javascriptreact,jsonc,less,sass,scss,stylus,typescript,typescriptreact,tsonc",
+	"prefix" : "--/*d2-",
+	"body"   : "/*--------------------------------------------------------*/",
+},
+"comment divider (/*) : d1 + single" : {
+	"scope"  : "css,javascript,javascriptreact,jsonc,less,sass,scss,stylus,typescript,typescriptreact,tsonc",
+	"prefix" : "--/*d1-",
+	"body"   : "/*----------------------------------------------------------------------------*/",
+},
+"comment divider (/*) : d4 + double" : {
+	"scope"  : "css,javascript,javascriptreact,jsonc,less,sass,scss,stylus,typescript,typescriptreact,tsonc",
+	"prefix" : "--/*d4=",
+	"body"   : "/*================*/",
+},
+"comment divider (/*) : d3 + double" : {
+	"scope"  : "css,javascript,javascriptreact,jsonc,less,sass,scss,stylus,typescript,typescriptreact,tsonc",
+	"prefix" : "--/*d3=",
+	"body"   : "/*====================================*/",
+},
+"comment divider (/*) : d2 + double" : {
+	"scope"  : "css,javascript,javascriptreact,jsonc,less,sass,scss,stylus,typescript,typescriptreact,tsonc",
+	"prefix" : "--/*d2=",
+	"body"   : "/*========================================================*/",
+},
+"comment divider (/*) : d1 + double" : {
+	"scope"  : "css,javascript,javascriptreact,jsonc,less,sass,scss,stylus,typescript,typescriptreact,tsonc",
+	"prefix" : "--/*d1=",
+	"body"   : "/*============================================================================*/",
+},
+"comment divider (/*) : d4 + hash" : {
+	"scope"  : "css,javascript,javascriptreact,jsonc,less,sass,scss,stylus,typescript,typescriptreact,tsonc",
+	"prefix" : "--/*d4#",
+	"body"   : "/*################*/",
+},
+"comment divider (/*) : d3 + hash" : {
+	"scope"  : "css,javascript,javascriptreact,jsonc,less,sass,scss,stylus,typescript,typescriptreact,tsonc",
+	"prefix" : "--/*d3#",
+	"body"   : "/*####################################*/",
+},
+"comment divider (/*) : d2 + hash" : {
+	"scope"  : "css,javascript,javascriptreact,jsonc,less,sass,scss,stylus,typescript,typescriptreact,tsonc",
+	"prefix" : "--/*d2#",
+	"body"   : "/*########################################################*/",
+},
+"comment divider (/*) : d1 + hash" : {
+	"scope"  : "css,javascript,javascriptreact,jsonc,less,sass,scss,stylus,typescript,typescriptreact,tsonc",
+	"prefix" : "--/*d1#",
+	"body"   : "/*############################################################################*/",
+},
+"comment divider (/*) : d4 + fat" : {
+	"scope"  : "css,javascript,javascriptreact,jsonc,less,sass,scss,stylus,typescript,typescriptreact,tsonc",
+	"prefix" : "--/*d4%",
+	"body"   : "/*%%%%%%%%%%%%%%%%*/",
+},
+"comment divider (/*) : d3 + fat" : {
+	"scope"  : "css,javascript,javascriptreact,jsonc,less,sass,scss,stylus,typescript,typescriptreact,tsonc",
+	"prefix" : "--/*d3%",
+	"body"   : "/*%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%*/",
+},
+"comment divider (/*) : d2 + fat" : {
+	"scope"  : "css,javascript,javascriptreact,jsonc,less,sass,scss,stylus,typescript,typescriptreact,tsonc",
+	"prefix" : "--/*d2%",
+	"body"   : "/*%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%*/",
+},
+"comment divider (/*) : d1 + fat" : {
+	"scope"  : "css,javascript,javascriptreact,jsonc,less,sass,scss,stylus,typescript,typescriptreact,tsonc",
+	"prefix" : "--/*d1%",
+	"body"   : "/*%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%*/",
+},
+"comment divider (/*) : d4 + right-slash" : {
+	"scope"  : "css,javascript,javascriptreact,jsonc,less,sass,scss,stylus,typescript,typescriptreact,tsonc",
+	"prefix" : "--/*d4/",
+	"body"   : "/*////////////////*/",
+},
+"comment divider (/*) : d3 + right-slash" : {
+	"scope"  : "css,javascript,javascriptreact,jsonc,less,sass,scss,stylus,typescript,typescriptreact,tsonc",
+	"prefix" : "--/*d3/",
+	"body"   : "/*////////////////////////////////////*/",
+},
+"comment divider (/*) : d2 + right-slash" : {
+	"scope"  : "css,javascript,javascriptreact,jsonc,less,sass,scss,stylus,typescript,typescriptreact,tsonc",
+	"prefix" : "--/*d2/",
+	"body"   : "/*////////////////////////////////////////////////////////*/",
+},
+"comment divider (/*) : d1 + right-slash" : {
+	"scope"  : "css,javascript,javascriptreact,jsonc,less,sass,scss,stylus,typescript,typescriptreact,tsonc",
+	"prefix" : "--/*d1/",
+	"body"   : "/*////////////////////////////////////////////////////////////////////////////*/",
+},
+"comment divider (/*) : d4 + left-slash" : {
+	"scope"  : "css,javascript,javascriptreact,jsonc,less,sass,scss,stylus,typescript,typescriptreact,tsonc",
+	"prefix" : "--/*d4\\",
+	"body"   : "/*\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/",
+},
+"comment divider (/*) : d3 + left-slash" : {
+	"scope"  : "css,javascript,javascriptreact,jsonc,less,sass,scss,stylus,typescript,typescriptreact,tsonc",
+	"prefix" : "--/*d3\\",
+	"body"   : "/*\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/",
+},
+"comment divider (/*) : d2 + left-slash" : {
+	"scope"  : "css,javascript,javascriptreact,jsonc,less,sass,scss,stylus,typescript,typescriptreact,tsonc",
+	"prefix" : "--/*d2\\",
+	"body"   : "/*\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/",
+},
+"comment divider (/*) : d1 + left-slash" : {
+	"scope"  : "css,javascript,javascriptreact,jsonc,less,sass,scss,stylus,typescript,typescriptreact,tsonc",
+	"prefix" : "--/*d1\\",
+	"body"   : "/*\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/",
+},
+///%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+/// comment headers
+///%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+"comment header (/*) : h4 + star" : {
+	"scope"  : "css,javascript,javascriptreact,jsonc,less,sass,scss,stylus,typescript,typescriptreact,tsonc",
+	"prefix" : "--/*h4*",
+	"body"   : [
+		"/*******************",
+		"  ${1:${TM_SELECTED_TEXT:header}}",
+		"*******************/${0}",
+	],
+},
+"comment header (/*) : h3 + star" : {
+	"scope"  : "css,javascript,javascriptreact,jsonc,less,sass,scss,stylus,typescript,typescriptreact,tsonc",
+	"prefix" : "--/*h3*",
+	"body"   : [
+		"/***************************************",
+		"  ${1:${TM_SELECTED_TEXT:header}}",
+		"***************************************/${0}",
+	],
+},
+"comment header (/*) : h2 + star" : {
+	"scope"  : "css,javascript,javascriptreact,jsonc,less,sass,scss,stylus,typescript,typescriptreact,tsonc",
+	"prefix" : "--/*h2*",
+	"body"   : [
+		"/***********************************************************",
+		"  ${1:${TM_SELECTED_TEXT:header}}",
+		"***********************************************************/${0}",
+	],
+},
+"comment header (/*) : h1 + star" : {
+	"scope"  : "css,javascript,javascriptreact,jsonc,less,sass,scss,stylus,typescript,typescriptreact,tsonc",
+	"prefix" : "--/*h1*",
+	"body"   : [
+		"/*******************************************************************************",
+		"  ${1:${TM_SELECTED_TEXT:header}}",
+		"*******************************************************************************/${0}",
+	],
+},
+"comment header (/*) : h4 + single" : {
+	"scope"  : "css,javascript,javascriptreact,jsonc,less,sass,scss,stylus,typescript,typescriptreact,tsonc",
+	"prefix" : "--/*h4-",
+	"body"   : [
+		"/*------------------",
+		"  ${1:${TM_SELECTED_TEXT:header}}",
+		"------------------*/${0}",
+	],
+},
+"comment header (/*) : h3 + single" : {
+	"scope"  : "css,javascript,javascriptreact,jsonc,less,sass,scss,stylus,typescript,typescriptreact,tsonc",
+	"prefix" : "--/*h3-",
+	"body"   : [
+		"/*--------------------------------------",
+		"  ${1:${TM_SELECTED_TEXT:header}}",
+		"--------------------------------------*/${0}",
+	],
+},
+"comment header (/*) : h2 + single" : {
+	"scope"  : "css,javascript,javascriptreact,jsonc,less,sass,scss,stylus,typescript,typescriptreact,tsonc",
+	"prefix" : "--/*h2-",
+	"body"   : [
+		"/*----------------------------------------------------------",
+		"  ${1:${TM_SELECTED_TEXT:header}}",
+		"----------------------------------------------------------*/${0}",
+	],
+},
+"comment header (/*) : h1 + single" : {
+	"scope"  : "css,javascript,javascriptreact,jsonc,less,sass,scss,stylus,typescript,typescriptreact,tsonc",
+	"prefix" : "--/*h1-",
+	"body"   : [
+		"/*------------------------------------------------------------------------------",
+		"  ${1:${TM_SELECTED_TEXT:header}}",
+		"------------------------------------------------------------------------------*/${0}",
+	],
+},
+"comment header (/*) : h4 + double" : {
+	"scope"  : "css,javascript,javascriptreact,jsonc,less,sass,scss,stylus,typescript,typescriptreact,tsonc",
+	"prefix" : "--/*h4=",
+	"body"   : [
+		"/*==================",
+		"  ${1:${TM_SELECTED_TEXT:header}}",
+		"==================*/${0}",
+	],
+},
+"comment header (/*) : h3 + double" : {
+	"scope"  : "css,javascript,javascriptreact,jsonc,less,sass,scss,stylus,typescript,typescriptreact,tsonc",
+	"prefix" : "--/*h3=",
+	"body"   : [
+		"/*======================================",
+		"  ${1:${TM_SELECTED_TEXT:header}}",
+		"======================================*/${0}",
+	],
+},
+"comment header (/*) : h2 + double" : {
+	"scope"  : "css,javascript,javascriptreact,jsonc,less,sass,scss,stylus,typescript,typescriptreact,tsonc",
+	"prefix" : "--/*h2=",
+	"body"   : [
+		"/*==========================================================",
+		"  ${1:${TM_SELECTED_TEXT:header}}",
+		"==========================================================*/${0}",
+	],
+},
+"comment header (/*) : h1 + double" : {
+	"scope"  : "css,javascript,javascriptreact,jsonc,less,sass,scss,stylus,typescript,typescriptreact,tsonc",
+	"prefix" : "--/*h1=",
+	"body"   : [
+		"/*==============================================================================",
+		"  ${1:${TM_SELECTED_TEXT:header}}",
+		"==============================================================================*/${0}",
+	],
+},
+"comment header (/*) : h4 + hash" : {
+	"scope"  : "css,javascript,javascriptreact,jsonc,less,sass,scss,stylus,typescript,typescriptreact,tsonc",
+	"prefix" : "--/*h4#",
+	"body"   : [
+		"/*##################",
+		"  ${1:${TM_SELECTED_TEXT:header}}",
+		"##################*/${0}",
+	],
+},
+"comment header (/*) : h3 + hash" : {
+	"scope"  : "css,javascript,javascriptreact,jsonc,less,sass,scss,stylus,typescript,typescriptreact,tsonc",
+	"prefix" : "--/*h3#",
+	"body"   : [
+		"/*######################################",
+		"  ${1:${TM_SELECTED_TEXT:header}}",
+		"######################################*/${0}",
+	],
+},
+"comment header (/*) : h2 + hash" : {
+	"scope"  : "css,javascript,javascriptreact,jsonc,less,sass,scss,stylus,typescript,typescriptreact,tsonc",
+	"prefix" : "--/*h2#",
+	"body"   : [
+		"/*##########################################################",
+		"  ${1:${TM_SELECTED_TEXT:header}}",
+		"##########################################################*/${0}",
+	],
+},
+"comment header (/*) : h1 + hash" : {
+	"scope"  : "css,javascript,javascriptreact,jsonc,less,sass,scss,stylus,typescript,typescriptreact,tsonc",
+	"prefix" : "--/*h1#",
+	"body"   : [
+		"/*##############################################################################",
+		"  ${1:${TM_SELECTED_TEXT:header}}",
+		"##############################################################################*/${0}",
+	],
+},
+"comment header (/*) : h4 + fat" : {
+	"scope"  : "css,javascript,javascriptreact,jsonc,less,sass,scss,stylus,typescript,typescriptreact,tsonc",
+	"prefix" : "--/*h4%",
+	"body"   : [
+		"/*%%%%%%%%%%%%%%%%%%",
+		"  ${1:${TM_SELECTED_TEXT:header}}",
+		"%%%%%%%%%%%%%%%%%%*/${0}",
+	],
+},
+"comment header (/*) : h3 + fat" : {
+	"scope"  : "css,javascript,javascriptreact,jsonc,less,sass,scss,stylus,typescript,typescriptreact,tsonc",
+	"prefix" : "--/*h3%",
+	"body"   : [
+		"/*%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%",
+		"  ${1:${TM_SELECTED_TEXT:header}}",
+		"%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%*/${0}",
+	],
+},
+"comment header (/*) : h2 + fat" : {
+	"scope"  : "css,javascript,javascriptreact,jsonc,less,sass,scss,stylus,typescript,typescriptreact,tsonc",
+	"prefix" : "--/*h2%",
+	"body"   : [
+		"/*%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%",
+		"  ${1:${TM_SELECTED_TEXT:header}}",
+		"%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%*/${0}",
+	],
+},
+"comment header (/*) : h1 + fat" : {
+	"scope"  : "css,javascript,javascriptreact,jsonc,less,sass,scss,stylus,typescript,typescriptreact,tsonc",
+	"prefix" : "--/*h1%",
+	"body"   : [
+		"/*%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%",
+		"  ${1:${TM_SELECTED_TEXT:header}}",
+		"%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%*/${0}",
+	],
+},
+"comment header (/*) : h4 + right-slash" : {
+	"scope"  : "css,javascript,javascriptreact,jsonc,less,sass,scss,stylus,typescript,typescriptreact,tsonc",
+	"prefix" : "--/*h4/",
+	"body"   : [
+		"/*//////////////////",
+		"  ${1:${TM_SELECTED_TEXT:header}}",
+		"//////////////////*/${0}",
+	],
+},
+"comment header (/*) : h3 + right-slash" : {
+	"scope"  : "css,javascript,javascriptreact,jsonc,less,sass,scss,stylus,typescript,typescriptreact,tsonc",
+	"prefix" : "--/*h3/",
+	"body"   : [
+		"/*//////////////////////////////////////",
+		"  ${1:${TM_SELECTED_TEXT:header}}",
+		"//////////////////////////////////////*/${0}",
+	],
+},
+"comment header (/*) : h2 + right-slash" : {
+	"scope"  : "css,javascript,javascriptreact,jsonc,less,sass,scss,stylus,typescript,typescriptreact,tsonc",
+	"prefix" : "--/*h2/",
+	"body"   : [
+		"/*//////////////////////////////////////////////////////////",
+		"  ${1:${TM_SELECTED_TEXT:header}}",
+		"//////////////////////////////////////////////////////////*/${0}",
+	],
+},
+"comment header (/*) : h1 + right-slash" : {
+	"scope"  : "css,javascript,javascriptreact,jsonc,less,sass,scss,stylus,typescript,typescriptreact,tsonc",
+	"prefix" : "--/*h1/",
+	"body"   : [
+		"/*//////////////////////////////////////////////////////////////////////////////",
+		"  ${1:${TM_SELECTED_TEXT:header}}",
+		"//////////////////////////////////////////////////////////////////////////////*/${0}",
+	],
+},
+"comment header (/*) : h4 + left-slash" : {
+	"scope"  : "css,javascript,javascriptreact,jsonc,less,sass,scss,stylus,typescript,typescriptreact,tsonc",
+	"prefix" : "--/*h4\\",
+	"body"   : [
+		"/*\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\",
+		"  ${1:${TM_SELECTED_TEXT:header}}",
+		"\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/${0}",
+	],
+},
+"comment header (/*) : h3 + left-slash" : {
+	"scope"  : "css,javascript,javascriptreact,jsonc,less,sass,scss,stylus,typescript,typescriptreact,tsonc",
+	"prefix" : "--/*h3\\",
+	"body"   : [
+		"/*\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\",
+		"  ${1:${TM_SELECTED_TEXT:header}}",
+		"\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/${0}",
+	],
+},
+"comment header (/*) : h2 + left-slash" : {
+	"scope"  : "css,javascript,javascriptreact,jsonc,less,sass,scss,stylus,typescript,typescriptreact,tsonc",
+	"prefix" : "--/*h2\\",
+	"body"   : [
+		"/*\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\",
+		"  ${1:${TM_SELECTED_TEXT:header}}",
+		"\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/${0}",
+	],
+},
+"comment header (/*) : h1 + left-slash" : {
+	"scope"  : "css,javascript,javascriptreact,jsonc,less,sass,scss,stylus,typescript,typescriptreact,tsonc",
+	"prefix" : "--/*h1\\",
+	"body"   : [
+		"/*\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\",
+		"  ${1:${TM_SELECTED_TEXT:header}}",
+		"\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/${0}",
+	],
+},
+///%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+}
