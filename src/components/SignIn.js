@@ -67,6 +67,25 @@ const SignUp = () => (
                   <div>{errors.username}</div>
                 )}
               </div>
+              <div className="mb-4">
+                <label
+                  className="block text-gray-700 text-sm font-bold mb-2"
+                  htmlFor="email"
+                >
+                  Email
+                </label>
+                <input
+                  className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  name="email"
+                  id="email"
+                  type="text"
+                  placeholder="Enter your email"
+                  value={values.email}
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                />
+                {errors.email && touched.email && <div>{errors.email}</div>}
+              </div>
               <div className="mb-6">
                 <label
                   className="block text-gray-700 text-sm font-bold mb-2"
@@ -112,23 +131,27 @@ const SignUp = () => (
   </div>
 );
 const FormikLogin = withFormik({
-  mapPropsToValues({ user, password }) {
+  mapPropsToValues({ user, email, password }) {
     return {
       user: user || "",
+      email: email || "",
       password: password || "",
     };
   },
   handleSubmit(values, { props, resetForm }) {
     const params = {
       username: values.user,
+      email: values.email,
       password: values.password,
     };
     axios
-      .post("url", params)
+      .post(
+        "https://ttw4-mud-server--staging.herokuapp.com/api/accounts/login/",
+        params
+      )
       .then((response) => {
-        console.log(response.data);
-        // localStorage.setItem("token", response.data.token);
-        // localStorage.setItem("user", response.data.user.id);
+        localStorage.setItem("token", response.data.token);
+        localStorage.setItem("user", response.data.user.id);
         props.history.push("/game");
         resetForm();
       })
