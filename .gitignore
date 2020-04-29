@@ -3,6 +3,8 @@
 **/.vscode/*
 !**/.vscode/*.code-snippets
 
+.DS_Store
+
 # Logs
 logs
 *.log
