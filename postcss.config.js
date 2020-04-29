@@ -5,4 +5,9 @@ module.exports = {
         tailwindcss('./tailwind.js'),
         require('autoprefixer')
     ],
+    theme: {
+        container: {
+          center: true,
+        },
+      },
 };
