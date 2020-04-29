@@ -10,4 +10,8 @@ module.exports = {
           center: true,
         },
       },
+    corePlugins: {
+        margin: false,
+        preflight: false,
+      }
 };
