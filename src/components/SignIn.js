@@ -25,7 +25,6 @@ const SignUp = () => (
       validationSchema={SignupSchema}
       onSubmit={(values, { setSubmitting }) => {
         setTimeout(() => {
-          console.log("Logging in", values);
           setSubmitting(false);
         }, 500);
       }}
@@ -150,7 +149,7 @@ const FormikLogin = withFormik({
         params
       )
       .then((response) => {
-        localStorage.setItem("token", response.data.token);
+        localStorage.setItem("key", response.data.key);
         localStorage.setItem("user", response.data.user.id);
         props.history.push("/game");
         resetForm();
