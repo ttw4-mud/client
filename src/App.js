@@ -8,7 +8,7 @@ import Game from "./components/Game";
 
 function App() {
   return (
-    <div>
+    <div className="container mx-auto h-screen">
       <Route exact path="/" component={SignIn} />
       <Route exact path="/signup" component={SignUp} />
       <PrivateRoute component={Game} exact path="/game" />
