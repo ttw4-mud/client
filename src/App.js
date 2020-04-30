@@ -6,13 +6,16 @@ import SignIn from "./components/SignIn";
 import SignUp from "./components/SignUp";
 import Game from "./components/Game";
 
+import { AppContainer, Title } from "./components/CustomStyles/index";
+
 function App() {
   return (
-    <div className="container mx-auto h-screen">
+    <AppContainer>
+      <Title />
       <Route exact path="/" component={SignIn} />
       <Route exact path="/signup" component={SignUp} />
       <PrivateRoute component={Game} exact path="/game" />
-    </div>
+    </AppContainer>
   );
 }
 
