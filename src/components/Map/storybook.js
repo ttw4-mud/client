@@ -40,26 +40,13 @@ const CustomCell = ({
   </g>
 );
 
-const keys = [
-  "hot dogs",
-  "burgers",
-  "sandwich",
-  "kebab",
-  "fries",
-  "donut",
-  "junk",
-  "sushi",
-  "ramen",
-  "curry",
-  "udon",
-  "bagel",
-];
+const keys = ["SQ1", "SQ2", "SQ3", "SQ4", "SQ5", "SQ6", "SQ7", "SQ8", "SQ9"];
 const commonProperties = {
   width: 900,
   height: 500,
   margin: { top: 60, right: 80, bottom: 60, left: 80 },
   data: generateCountriesData(keys, { size: 9, min: 0, max: 100 }),
-  indexBy: "country",
+  indexBy: "row",
   keys,
 };
 
