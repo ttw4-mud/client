@@ -1,7 +1,7 @@
 import axios from "axios";
 
-export const axiosWithAuth = () => {
-  const token = localStorage.getItem("token");
+const axiosWithAuth = () => {
+  const token = localStorage.getItem("key");
 
   return axios.create({
     headers: {
@@ -10,3 +10,5 @@ export const axiosWithAuth = () => {
     },
   });
 };
+
+export default axiosWithAuth;
