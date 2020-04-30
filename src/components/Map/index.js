@@ -7,20 +7,8 @@ const Map = () => {
   return (
     <ResponsiveHeatMap
       data={data}
-      keys={[
-        "hot dog",
-        "burger",
-        "sandwich",
-        "kebab",
-        "fries",
-        "donut",
-        "junk",
-        "sushi",
-        "ramen",
-        "curry",
-        "udon",
-      ]}
-      indexBy="country"
+      keys={["col1", "col2", "col3"]}
+      indexBy="row"
       margin={{ top: 100, right: 60, bottom: 60, left: 60 }}
       minValue={22}
       maxValue={63}
