@@ -6,17 +6,17 @@ export const data = [
   //!!!!!!! DO NOT CHANGE THE ROW STRING"
   {
     row: "1",
-    col1: "",
-    col3: "",
+    col1: 0,
+    col3: 0,
   },
 
   {
     row: "2",
-    col2: "",
+    col2: 0,
   },
   {
     row: "3",
-    col1: "",
-    col3: "",
+    col1: 0,
+    col3: 0,
   },
 ];
