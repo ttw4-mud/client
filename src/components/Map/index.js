@@ -10,17 +10,17 @@ const Map = () => {
       keys={["col1", "col2", "col3"]}
       indexBy="row"
       margin={{ top: 100, right: 60, bottom: 60, left: 60 }}
-      minValue={22}
-      maxValue={63}
+      minValue={10}
+      maxValue={10}
       forceSquare={true}
-      colors="greys"
+      // colors="reds"
       axisTop={null}
       axisRight={null}
       axisBottom={null}
       axisLeft={null}
-      cellOpacity={1}
+      // cellOpacity={200}
       cellBorderWidth={4}
-      cellBorderColor="#565d56"
+      cellBorderColor="#AA2A0D"
       enableLabels={false}
       labelTextColor="#494949"
       defs={[
@@ -34,12 +34,12 @@ const Map = () => {
           spacing: 7,
         },
       ]}
-      fill={[{ id: "lines" }]}
-      animate={true}
-      motionStiffness={80}
-      motionDamping={9}
+      // fill={[{ id: "lines" }]}
+      // animate={false}
+      // motionStiffness={0}
+      // motionDamping={0}
       isInteractive={false}
-      cellHoverOthersOpacity={0.1}
+      // cellHoverOthersOpacity={0.1}
     />
   );
 };
