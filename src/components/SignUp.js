@@ -151,10 +151,7 @@ const FormikLogin = withFormik({
       password2: values.password2,
     };
     axiosWithAuth()
-      .post(
-        "https://cors-anywhere.herokuapp.com/https://ttw4-mud-server--staging.herokuapp.com/api/accounts/register/",
-        params
-      )
+      .post("/accounts/register/", params)
       .then((response) => {
         localStorage.setItem("key", response.data.key);
         props.history.push("/game");
