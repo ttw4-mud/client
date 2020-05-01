@@ -8,7 +8,7 @@ const axiosWithAuth = () => {
       "https://cors-anywhere.herokuapp.com/https://ttw4-mud-server--staging.herokuapp.com/api",
     headers: {
       "Content-Type": "application/json",
-      Authorization: token,
+      Authorization: `Token ${token}`,
     },
   });
 };
