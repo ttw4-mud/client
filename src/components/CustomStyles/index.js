@@ -91,3 +91,10 @@ export const RoomInfo = styled.div`
   align-items: center;
   justify-content: center;
 `;
+
+export const TilePre = styled.pre`
+  font-size: 4rem;
+  line-height: 1;
+  color: white;
+  margin: 3rem;
+`;
