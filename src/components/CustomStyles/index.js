@@ -44,6 +44,16 @@ export const StartButton = styled.button`
   align-items: center;
 `;
 
+export const SignOutButton = styled.button`
+  background-color: red;
+  border-radius: 5px;
+  width: 10rem;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
 export const MoveButton = styled.div`
   background-color: red;
   border-radius: 5px;

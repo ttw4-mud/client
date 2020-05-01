@@ -1,5 +1,3 @@
-import Character from "../Game/Character";
-
 export const data = [
   // row generates the number of rows
   //col, we have col 1-6 controls each individual box if string left blank will return no color
