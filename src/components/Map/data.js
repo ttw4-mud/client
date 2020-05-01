@@ -1,3 +1,5 @@
+import Character from "../Game/Character";
+
 export const data = [
   // row generates the number of rows
   //col, we have col 1-6 controls each individual box if string left blank will return no color
@@ -6,17 +8,33 @@ export const data = [
   //!!!!!!! DO NOT CHANGE THE ROW STRING"
   {
     row: "1",
-    col1: 0,
-    col3: 0,
   },
 
   {
     row: "2",
-    col2: 0,
   },
   {
     row: "3",
-    col1: 0,
-    col3: 0,
+  },
+  {
+    row: "4",
+  },
+  {
+    row: "5",
+  },
+  {
+    row: "6",
+  },
+  {
+    row: "7",
+  },
+  {
+    row: "8",
+  },
+  {
+    row: "9",
+  },
+  {
+    row: "10",
   },
 ];
