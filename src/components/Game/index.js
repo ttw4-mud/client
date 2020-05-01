@@ -14,11 +14,12 @@ import {
   StartButton,
   ButtonWrapper,
   TilePre,
+  RoomInfo,
   // SignOutButton
 } from "../CustomStyles/index";
 
 const Game = () => {
-  const [gamedata, setGameData] = useState({
+  const [gameData, setGameData] = useState({
     tile: { drawing: { string: "" } },
   });
 
@@ -64,10 +65,9 @@ const Game = () => {
 
   return (
     <GamePage>
-      <Character />
+      <RoomInfo>{gameData.messages}</RoomInfo>
       <MapWrapper>
-        {/* <StartButton onClick = {Player}>Start</StartButton> */}
-        <TilePre>{gamedata.tile.drawing.string}</TilePre>
+        <TilePre>{gameData.tile.drawing.string}</TilePre>
         <Instructions />
         <ButtonWrapper></ButtonWrapper>
       </MapWrapper>
