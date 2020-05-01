@@ -143,7 +143,7 @@ const FormikLogin = withFormik({
       .required("confirmation required")
       .oneOf([Yup.ref("password1"), null], "Passwords must match"),
   }),
-  handleSubmit(e, values, { props, resetForm }) {
+  handleSubmit(values, { props, resetForm }) {
     const params = {
       username: values.username,
       email: values.email,
