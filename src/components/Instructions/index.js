@@ -1,10 +1,12 @@
 import React from "react";
+import { RoomInfo } from "../CustomStyles/index";
 
 const Instructions = () => {
   return (
-    <div>
-      Escape the dungeon! Click the button keys to move. Good luck traveler!
-    </div>
+    <RoomInfo>
+      Escape the dungeon! Use your keyboard to move ⬆︎ ⬇︎ ⬅︎ ➡︎ Good luck
+      traveler!
+    </RoomInfo>
   );
 };
 

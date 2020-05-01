@@ -1,19 +1,23 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axiosWithAuth from "../../auth/index";
 import Instructions from "../Instructions/index";
-import Movement from "../Directions/index";
+import Character from "./Character";
 import Map from "../Map/index";
 import {
   MapWrapper,
   GamePage,
-  Title,
   StartButton,
-  MoveButton,
   ButtonWrapper,
 } from "../CustomStyles/index";
 
-const Game = () => {
+const Game = ({ status }) => {
   const [state, setState] = useState();
+
+  useEffect(() => {
+    if (status) {
+      setState([...state, status]);
+    }
+  }, [state, status]);
 
   // movement endpoint
   const handleMovement = (direction) => {
@@ -32,7 +36,8 @@ const Game = () => {
 
   //where the game starts endpoint
 
-  const initializeGame = () => {
+  const initializeGame = (e) => {
+    e.persist();
     axiosWithAuth()
       .post(
         "https://cors-anywhere.herokuapp.com/https://ttw4-mud-server--staging.herokuapp.com/api/adventure/start/"
@@ -47,16 +52,12 @@ const Game = () => {
 
   return (
     <GamePage>
+      <Character />
       <MapWrapper>
         <StartButton onClick={initializeGame}>Start</StartButton>
         <Map />
         <Instructions />
-        <ButtonWrapper>
-          <MoveButton onClick={handleMovement}>N</MoveButton>
-          <MoveButton onClick={handleMovement}>S</MoveButton>
-          <MoveButton onClick={handleMovement}>E</MoveButton>
-          <MoveButton onClick={handleMovement}>W</MoveButton>
-        </ButtonWrapper>
+        <ButtonWrapper onClick={handleMovement}></ButtonWrapper>
       </MapWrapper>
     </GamePage>
   );
