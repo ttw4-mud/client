@@ -20,7 +20,7 @@ const SignUp = ({
       setUsers([...users, status]);
       history.push("/game");
     }
-  }, []);
+  }, [history, status, users]);
 
   return (
     <div className="w-full max-w-xs">
@@ -143,7 +143,7 @@ const FormikLogin = withFormik({
       .required("confirmation required")
       .oneOf([Yup.ref("password1"), null], "Passwords must match"),
   }),
-  handleSubmit(values, { props, resetForm }) {
+  handleSubmit(e, values, { props, resetForm }) {
     const params = {
       username: values.username,
       email: values.email,

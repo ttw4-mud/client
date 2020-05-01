@@ -7,9 +7,20 @@ const Map = () => {
   return (
     <ResponsiveHeatMap
       data={data}
-      keys={["col1", "col2", "col3"]}
+      keys={[
+        "col1",
+        "col2",
+        "col3",
+        "col4",
+        "col5",
+        "col6",
+        "col7",
+        "col8",
+        "col9",
+        "col10",
+      ]}
       indexBy="row"
-      margin={{ top: 100, right: 60, bottom: 60, left: 60 }}
+      margin={{ top: 5, right: 60, bottom: 10, left: 60 }}
       minValue={10}
       maxValue={10}
       forceSquare={true}
@@ -18,8 +29,8 @@ const Map = () => {
       axisRight={null}
       axisBottom={null}
       axisLeft={null}
-      // cellOpacity={200}
-      cellBorderWidth={4}
+      cellOpacity={200}
+      cellBorderWidth={2}
       cellBorderColor="#AA2A0D"
       enableLabels={false}
       labelTextColor="#494949"
@@ -30,16 +41,16 @@ const Map = () => {
           background: "inherit",
           color: "rgba(0, 0, 0, 0.1)",
           rotation: -45,
-          lineWidth: 4,
+          // lineWidth: 0,
           spacing: 7,
         },
       ]}
-      // fill={[{ id: "lines" }]}
-      // animate={false}
-      // motionStiffness={0}
-      // motionDamping={0}
-      isInteractive={false}
-      // cellHoverOthersOpacity={0.1}
+      fill={[{ id: "lines" }]}
+      animate={false}
+      motionStiffness={0}
+      motionDamping={0}
+      isInteractive={true}
+      cellHoverOthersOpacity={0.1}
     />
   );
 };

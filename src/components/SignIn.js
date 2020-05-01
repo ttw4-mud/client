@@ -21,7 +21,7 @@ const SignIn = ({
       setUsers([...users, status]);
       history.push("/game");
     }
-  }, []);
+  }, [history, status, users]);
 
   return (
     <div className="w-full max-w-xs">

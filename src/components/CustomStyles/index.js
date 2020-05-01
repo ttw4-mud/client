@@ -44,7 +44,7 @@ export const StartButton = styled.button`
   align-items: center;
 `;
 
-export const MoveButton = styled.button`
+export const MoveButton = styled.div`
   background-color: red;
   border-radius: 5px;
   width: 6rem;
@@ -71,4 +71,13 @@ export const AppContainer = styled.div`
   // justify-content:center;
   align-items: center;
   background-color: black;
+`;
+
+export const RoomInfo = styled.div`
+  border-radius: 5px;
+  border-color: red;
+  width: 80%;
+  height: 15%;
+  align-items: center;
+  justify-content: center;
 `;
